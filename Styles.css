@@ -360,13 +360,51 @@ footer {
 }
 
 
-/* Diseño adaptable */
+/* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
-    .testimonial {
-        flex: 1 1 100%; /* Un testimonio por fila en pantallas pequeñas */
-    }
-    .footerInfo {
+    header {
         flex-direction: column;
         text-align: center;
     }
+    nav .Menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .contenidoNosotros {
+        flex-direction: column;
+        text-align: center;
+    }
+    .NosotrosImg, .NosotrosTexto {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .equipo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .miembro {
+        width: 80%;
+    }
 }
+
+/* Responsive para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenidoNosotros {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .NosotrosImg, .NosotrosTexto {
+        max-width: 80%;
+        padding-left: 0;
+    }
+    .equipo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .miembro {
+        width: 45%;
+    }
+}
+

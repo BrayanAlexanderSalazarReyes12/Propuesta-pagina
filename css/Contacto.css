@@ -205,3 +205,42 @@ footer {
     font-size: 0.9em;
     opacity: 0.7;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .Menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .footerInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .menu_descargable {
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Logo img {
+        max-width: 80px;
+    }
+
+    .contact-container {
+        padding: 10px;
+    }
+}
