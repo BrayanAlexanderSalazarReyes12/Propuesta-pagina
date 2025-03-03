@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Aires Acondicionados</title>
+    <link rel="stylesheet" href="../css/Tienda.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="../js/AbrirMenu.js"></script>
+    <script src="../js/Carrito.js"></script>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="../img/Logo.png" alt="Logo Ibros">
+        </div>
+        <nav>
+            <ul class="Menu">
+                <li><a href="../Index.html">Inicio</a></li>
+                <li>
+                    <a href="#" onclick="mundo()">Descargas</a>
+                    <ul class="menu_descargable" id="menu_descargable">
+                        <li><a href="#">Políticas de manejo de datos personales</a></li>
+                        <li><a href="#">Políticas de garantía cambios y devoluciones</a></li>
+                        <li><a href="#">Manuales y Guías de aires acondicionados</a></li>
+                        <li><a href="#">Proceso de Reorganización Administrativa</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+            </ul>
+            <div class="Hamburger-menu" id="menu-activo"><i class="bi bi-list"></i></div>
+        </nav>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="cart-container" id="cart-container">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-list"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button onclick="openCartPage()">Ver Carrito Completo</button>
+        <button onclick="closeCart()">Cerrar</button>
+    </div>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filtrar por</h2>
+            <h3>Marcas</h3>
+            <ul>
+                <li><input type="checkbox" onclick="filterProducts()" value="Comfort Star"> Comfort Star</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="Mirage"> Mirage</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="FSD"> FSD</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="LG"> LG</li>
+            </ul>
+            <h3>Capacidad BTU</h3>
+            <ul>
+                <li><input type="checkbox" onclick="filterProducts()" value="12000"> 12000 BTU</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="18000"> 18000 BTU</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="24000"> 24000 BTU</li>
+                <li><input type="checkbox" onclick="filterProducts()" value="36000"> 36000 BTU</li>
+            </ul>
+            <h3>Precio</h3>
+            <input type="range" id="priceRange" min="0" max="1000" step="50" oninput="filterProducts()">
+            <span id="priceValue">$1000</span>
+        </aside>
+
+        <main class="products">
+            <div class="product" data-brand="FSD" data-btu="36000" data-price="500">
+                <img src="../img/Aire1.jpg" alt="Aire Acondicionado Split 36000 BTU">
+                <h3>Aire Acondicionado Split 36000 BTU</h3>
+                <p>$5.000.000</p>
+                <button class="add-to-cart" onclick="addToCart('Aire Acondicionado Split 36000 BTU', 5000000, '../img/Aire1.jpg')">Agregar al carrito</button>
+            </div>
+            <div class="product" data-brand="Mirage" data-btu="60000" data-price="700">
+                <img src="../img/Aire1.jpg" alt="Aire Acondicionado Cassette 60000 BTU">
+                <h3>Aire Acondicionado Cassette 60000 BTU</h3>
+                <p>$5.000.000</p>
+                <button class="add-to-cart" onclick="addToCart('Aire Acondicionado Cassette 60000 BTU', 5000000, '../img/Aire1.jpg')">Agregar al carrito</button>
+            </div>
+            <div class="product" data-brand="LG" data-btu="48000" data-price="650">
+                <img src="../img/Aire1.jpg" alt="Aire Acondicionado Piso 48000 BTU">
+                <h3>Aire Acondicionado Piso 48000 BTU</h3>
+                <p>$5.000.000</p>
+                <button class="add-to-cart" onclick="addToCart('Aire Acondicionado Piso 48000 BTU', 5000000, '../img/Aire1.jpg')">Agregar al carrito</button>
+            </div>
+        </main>
+        
+    </div>
+    
+    <footer>
+        <div class="footerContenedor">
+            <div class="footerInfo">
+                <div class="footer-section">
+                    <h4>DIRECCIÓN</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACTO</h4>
+                    <p>📞 5152016211654</p>
+                    <p><strong>Email:</strong></p>
+                    <p><a href="#">prueba@correo.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>HORARIO</h4>
+                    <p><strong>Lunes – Viernes:</strong> 8:00 am – 4:00 pm</p>
+                    <p><strong>Sábados:</strong> 8:00 am – 12:00 m</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Nuestras redes sociales</h3>
+                <div class="SocialIconos">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-Copy">&copy; 2025 Brayan Alexander Salazar Reyes. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        let cart = [];
+
+        function addToCart(name, price, image) {
+            let existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name, price, image, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-list');
+            const cartTotal = document.getElementById('cart-total');
+            cartList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                cartList.innerHTML += `
+                    <li>
+                        <img src="${item.image}" width="50"> ${item.name} - $${item.price} x 
+                        <input type="number" min="1" value="${item.quantity}" onchange="changeQuantity(${index}, this.value)">
+                        <button onclick="removeFromCart(${index})">X</button>
+                    </li>`;
+            });
+
+            cartTotal.textContent = total;
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+
+        function changeQuantity(index, value) {
+            cart[index].quantity = parseInt(value);
+            saveCart();
+            updateCart();
+        }
+
+        function saveCart() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function openCartPage() {
+            window.location.href = "Cart.html";
+        }
+    </script>
+</body>
+</html>

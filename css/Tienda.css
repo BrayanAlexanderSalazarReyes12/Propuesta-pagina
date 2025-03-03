@@ -1,0 +1,284 @@
+:root {
+    --color-primario: #f4f4f4; /* Azul Oscuro */
+    --color-secundario: #E02020; /* Rojo */
+    --color-fondo: #FFFFFF; /* Blanco */
+    --color-enlace: #1572B6; /* Azul Claro */
+    --color-enlace-oscuro: #176aa6; /* Azul Oscuro */
+    --color-fondo-suave: #F4F4F4; /* Gris Claro */
+    --color-texto-secundario: #5A5A5A; /* Gris Oscuro */
+    --color-texto: black;
+} 
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+header{
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.Logo img{
+    max-width: 100px;
+}
+
+nav{
+    position: relative;
+}
+
+nav .Menu{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav .Menu li a{
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+nav .menu_descargable {
+    list-style: none;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    gap: 15px;
+    position: absolute; /* Para que no empuje el contenido */
+    top: 100%; /* Aparece justo debajo del menú principal */
+    left: 14vh; /* Alineado con la izquierda del nav */
+    background-color: var(--color-primario); /* Ajusta el color de fondo */
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para que se vea bien */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+nav .menu_descargable li a{
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: lighter;
+    margin-right: 10px;
+}
+
+.Hamburger-menu{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Sidebar de filtros */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2, .sidebar h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar input {
+    margin-right: 5px;
+}
+
+/* Sección de productos */
+.products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.add-to-cart {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #cc5500;
+}
+
+/* Carrito de compras */
+.cart-container {
+    display: none;
+    max-width: 50vh;
+    left: 52vh; /* Alineado con la izquierda del nav */
+    padding: 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 112vh;
+    position: absolute; /* Para que no empuje el contenido */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.cart-container h2 {
+    text-align: center;
+}
+
+.cart-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-container li {
+    background: #f8f8f8;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.cart-container button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.cart-container button:hover {
+    background-color: #cc5500;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto-secundario);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footerContenedor {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Información del footer */
+.footerInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--color-enlace);
+}
+
+.footer-section p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+/* Links de contacto */
+.footer-section a {
+    color: var(--color-enlace);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Redes sociales */
+.footer-social {
+    text-align: center;
+}
+
+.SocialIconos {
+    margin-top: 10px;
+}
+
+.SocialIconos a {
+    font-size: 24px;
+    color: var(--color-enlace);
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.SocialIconos a:hover {
+    color: var(--color-enlace-oscuro);
+}
+
+/* Copyright */
+.footer-Copy {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.7;
+}

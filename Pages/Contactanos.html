@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="../css/Contacto.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="../img/Logo.png" alt="Logo Ibros">
+        </div>
+        <nav>
+            <ul class="Menu">
+                <li><a href="../Index.html">Inicio</a></li>
+                <li>
+                    <a href="#" onclick="mundo()">Descargas</a>
+                    <ul class="menu_descargable" id="menu_descargable">
+                        <li><a href="#">Políticas de manejo de datos personales</a></li>
+                        <li><a href="#">Políticas de garantía cambios y devoluciones</a></li>
+                        <li><a href="#">Manuales y Guías de aires acondicionados</a></li>
+                        <li><a href="#">Proceso de Reorganización Administrativa</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+            </ul>
+            <div class="Hamburger-menu" id="menu-activo"><i class="bi bi-list"></i></div>
+        </nav>
+    </header>
+    <section class="contact-container">
+        <div class="contact-form">
+            <h2>Contáctanos</h2>
+            <p>Por favor, completa todos los campos para enviarnos tu mensaje.</p>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad, País</p>
+            <p><strong>Teléfono:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> contacto@empresa.com</p>
+            <p><strong>Horario:</strong> Lunes a Viernes, 8:00 AM - 6:00 PM</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footerContenedor">
+            <div class="footerInfo">
+                <div class="footer-section">
+                    <h4>DIRECCIÓN</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACTO</h4>
+                    <p>📞 5152016211654</p>
+                    <p><strong>Email:</strong></p>
+                    <p><a href="#">prueba@correo.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>HORARIO</h4>
+                    <p><strong>Lunes – Viernes:</strong> 8:00 am – 4:00 pm</p>
+                    <p><strong>Sábados:</strong> 8:00 am – 12:00 m</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Nuestras redes sociales</h3>
+                <div class="SocialIconos">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-Copy">&copy; 2025 Brayan Alexander Salazar Reyes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

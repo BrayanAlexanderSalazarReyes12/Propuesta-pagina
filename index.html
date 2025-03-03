@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/AbrirMenu.js" defer></script>
+    <title>IBROS</title>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="img/Logo.png" alt="Logo Ibros">
+        </div>
+        <nav>
+            <ul class="Menu">
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#NuestroEquipo">Nuestro Equipo</a></li>
+                <li><a href="#testimonials">Opiniones De Clientes</a></li>
+                <li><a href="Pages/Tienda.html">Tienda</a></li>
+                <li>
+                    <a href="#" onclick="mundo()">Descargas</a>
+                    <ul class="menu_descargable" id="menu_descargable">
+                        <li><a href="#">Politícas de manejo de datos personales</a></li>
+                        <li><a href="#">Politícas de garantía cambios y devoluciones</a></li>
+                        <li><a href="#">Manuales y Guías de aires acondicionados</a></li>
+                        <li><a href="#">Proceso de Reorganización Administrativa</a></li>
+                    </ul>
+                </li>
+                <li><a href="Pages/Contactanos.html">Contacto</a></li>
+            </ul>
+            <div class="Hamburger-menu" id="menu-activo"><i class="bi bi-list"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Nosotros">
+            <div class="containerNosotros">
+                <h1 class="tituloNosotros">Nosotros</h1>
+                <div class="contenidoNosotros">
+                    <div class="NosotrosImg">
+                        <img src="img/nosotros.jpg" alt="ImagenNosotrosIBROS">
+                        <div class="overlay-texto">
+                            <h2>IBRO S.A.S</h2>
+                            <p>Comprometidos con la excelencia.</p>
+                        </div>
+                    </div>
+                    <div class="NosotrosTexto">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro esse eos,</h2>
+                        <p>
+                            Somos una empresa dedicada a la comercialización de equipos de aire acondicionado, ofreciendo soluciones para diversos entornos, 
+                            desde espacios residenciales hasta aplicaciones industriales y médicas. Colaboramos con fabricantes reconocidos para 
+                            garantizar acceso a productos de alta calidad y tecnología avanzada. Nuestra misión es proporcionar un servicio integral que 
+                            incluya asesoramiento, instalación y soporte técnico, asegurando que cada cliente encuentre la mejor opción según sus necesidades. 
+                            Nos comprometemos a ofrecer respaldo y garantía en cada uno de nuestros productos y servicios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section class="NuestroEquipo" id="NuestroEquipo">
+            <div class="containerNuestroEquipo">
+                <h1>Nuestro equipo</h1>
+                <p>Bienvenido a la sección donde te presentamos al corazón de nuestra empresa</p>
+                <div class="equipo-container">
+                    <div class="equipo">
+                        <div class="miembro">
+                            <img src="img/Hombre1.jpg" alt="user1">
+                            <div class="info">
+                                <h2>Juan carlos</h2>
+                                <div class="cargo">Lorem ipsum dolor sit</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="miembro">
+                            <img src="img/Hombre2.jpg" alt="user2">
+                            <div class="info">
+                                <h2>Miguel Angel</h2>
+                                <div class="cargo">Lorem ipsum dolor sit</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="miembro">
+                            <img src="img/Mujer1.jpg" alt="user3">
+                            <div class="info">
+                                <h2>Maria Fernanda</h2>
+                                <div class="cargo">Lorem ipsum dolor sit</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="miembro">
+                            <img src="img/Mujer2.jpg" alt="user4">
+                            <div class="info">
+                                <h2>Paola Maria</h2>
+                                <div class="cargo">Lorem ipsum dolor sit</div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        
+        <section class="testimonials" id="testimonials">
+            <div class="containerTestimonials">
+                <h1>Opiniones de los clientes</h1>
+                <p>Conoce las opiniones de nuestros clientes en Google</p>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Cada interacción con su equipo refleja su dedicación al buen servicio y a satisfacer las necesidades del cliente. ¡Gracias por hacer que mi experiencia sea tan positiva!"</p>
+                        <div class="client-info">
+                            <img src="img/avatar1.jpg" alt="Foto de cliente">
+                            <div>
+                                <h4>Marco Andres Polo</h4>
+                                <span>Cliente Satisfecho</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Excelente empresa, super recomendados. Tienen asesores que brindan una maravillosa atención de calidad. ¡Saludos!"</p>
+                        <div class="client-info">
+                            <img src="img/avatar2.jpg" alt="Foto de cliente">
+                            <div>
+                                <h4>Carlos Antonio Londoño</h4>
+                                <span>Cliente Satisfecho</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Empresa de gran tradición, destacada por la calidad de sus marcas y un extraordinario servicio postventa."</p>
+                        <div class="client-info">
+                            <img src="img/avatar3.jpg" alt="Foto de cliente">
+                            <div>
+                                <h4>Maria Andrea Carillo</h4>
+                                <span>Cliente Satisfecho</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>               
+              
+    </main>
+    <footer>
+        <div class="footerContenedor">
+            <div class="footerInfo">
+                <div class="footer-section">
+                    <h4>DIRECCIÓN</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTACTO</h4>
+                    <p>📞 5152016211654</p>
+                    <p><strong>Email:</strong></p>
+                    <p><a href="#">prueba@correo.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>HORARIO</h4>
+                    <p><strong>Lunes – Viernes:</strong> 8:00 am – 4:00 pm</p>
+                    <p><strong>Sábados:</strong> 8:00 am – 12:00 m</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Nuestras redes sociales</h3>
+                <div class="SocialIconos">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-Copy">&copy; 2025 Brayan Alexander Salazar Reyes. Todos los derechos reservados.</p>
+    </footer>    
+</body>
+</html>
