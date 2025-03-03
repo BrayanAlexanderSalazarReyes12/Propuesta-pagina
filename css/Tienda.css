@@ -282,3 +282,68 @@ footer {
     font-size: 0.9em;
     opacity: 0.7;
 }
+
+
+/* Estilos Responsivos */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .cart-container {
+        left: auto;
+        margin-left: 0;
+        max-width: 80%;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav .Menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    .Hamburger-menu {
+        display: block;
+    }
+    .sidebar {
+        display: none;
+    }
+    .products {
+        grid-template-columns: 1fr;
+    }
+    .cart-container {
+        max-width: 90%;
+    }
+    .footerInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Logo img {
+        max-width: 80px;
+    }
+    .products {
+        grid-template-columns: 1fr;
+    }
+    .cart-container {
+        padding: 20px;
+    }
+    .footer-section {
+        min-width: auto;
+    }
+}
